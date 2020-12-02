@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace HeistPart2
 {
@@ -9,6 +10,7 @@ namespace HeistPart2
         public int VaultScore { get; set; }
         public int SecurityGuardScore { get; set; }
         bool IsSecure { get; set; }
+
 
 
         public void SecurityCheck()
@@ -23,6 +25,18 @@ namespace HeistPart2
                 IsSecure = true;
             }
         }
+
+        public Bank()
+        {
+            Random r = new Random();
+            AlarmScore = r.Next(0, 100);
+            VaultScore = r.Next(0, 100);
+            SecurityGuardScore = r.Next(0, 100);
+            CashOnHand = r.Next(50000, 1000_000);
+        }
+
+
+
 
     }
 }
