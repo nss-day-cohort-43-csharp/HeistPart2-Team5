@@ -7,6 +7,8 @@ namespace HeistPart2
     {
         static void Main(string[] args)
         {
+
+
             Hacker hacker1 = new Hacker()
             {
                 Name = "Faith",
@@ -53,44 +55,63 @@ namespace HeistPart2
                hacker1, hacker2, muscle1, muscle2, lockSpecialist1, lockSpecialist2
            };
 
-
-            Console.WriteLine($"Current number of operatives {rolodex.Count}");
-            Console.WriteLine("Enter a new team member");
-            string NewTeamMember = Console.ReadLine();
-
-            Console.WriteLine("What is their specialty");
-            Console.WriteLine("1) Hacker (Disables alarms)");
-            Console.WriteLine("2) Muscle (Disarms guards)");
-            Console.WriteLine("3) Lock Specialist (cracks vault)");
-            string ChooseSpecialty = Console.ReadLine();
-
-            Console.WriteLine("What is the team member's skill level? (a number between 1-100)");
-            string MemberSkill = Console.ReadLine();
-            int NewSkillLevel = int.Parse(MemberSkill);
-
-            Console.WriteLine("What percentage do they get?");
-            string MemberCut = Console.ReadLine();
-            int NewMemberCut = int.Parse(MemberCut);
-
-            if (ChooseSpecialty == "1")
+            //LoopToken allows while loop to continuously, once changed to false.. loop terminates
+            bool LoopToken = true;
+            while (LoopToken == true)
             {
-                rolodex.Add(new Hacker() { });
-                Console.WriteLine("You've added a new Hacker to the team!");
-            }
-            else if (ChooseSpecialty == "2")
-            {
-                rolodex.Add(new Muscle() { });
-                Console.WriteLine("You've added new Muscle to the team!");
+                Console.WriteLine($"Current number of operatives {rolodex.Count}");
+                Console.WriteLine("------------------------");
+                Console.WriteLine("Enter a new team member");
+                string NewTeamMember = Console.ReadLine();
+                Console.WriteLine("");
+                if (NewTeamMember == "")
+                { LoopToken = false; }
 
-            }
-            else if (ChooseSpecialty == "3")
-            {
-                rolodex.Add(new LockSpecialist() { });
-                Console.WriteLine("You've added a new Lock Specialist to the team!");
+                else
+                {
 
+
+                    Console.WriteLine("What is their specialty");
+                    Console.WriteLine("1) Hacker (Disables alarms)");
+                    Console.WriteLine("2) Muscle (Disarms guards)");
+                    Console.WriteLine("3) Lock Specialist (cracks vault)");
+                    string ChooseSpecialty = Console.ReadLine();
+                    Console.WriteLine("");
+
+                    Console.WriteLine("What is the team member's skill level? (a number between 1-100)");
+                    string MemberSkill = Console.ReadLine();
+                    int NewSkillLevel = int.Parse(MemberSkill);
+                    Console.WriteLine("");
+
+                    Console.WriteLine("What percentage do they get?");
+                    string MemberCut = Console.ReadLine();
+                    int NewMemberCut = int.Parse(MemberCut);
+                    Console.WriteLine("");
+
+                    if (ChooseSpecialty == "1")
+                    {
+                        rolodex.Add(new Hacker() { });
+                        Console.WriteLine("You've added a new Hacker to the team!");
+                    }
+                    else if (ChooseSpecialty == "2")
+                    {
+                        rolodex.Add(new Muscle() { });
+                        Console.WriteLine("You've added new Muscle to the team!");
+
+                    }
+                    else if (ChooseSpecialty == "3")
+                    {
+                        rolodex.Add(new LockSpecialist() { });
+
+                        Console.WriteLine("You've added a new Lock Specialist to the team!");
+                    }
+                }
             }
+<<<<<<< HEAD
             Console.WriteLine($"New number of operatives {rolodex.Count}");
 
+=======
+>>>>>>> d7253e19d70643eab886a45d901ff58b41651d8f
         }
     }
 }
