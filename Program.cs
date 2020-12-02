@@ -96,7 +96,8 @@ namespace HeistPart2
                         {
                             Name = NewTeamMember,
                             SkillLevel = NewSkillLevel,
-                            PercentageCut = NewMemberCut
+                            PercentageCut = NewMemberCut,
+                            Specialty = ChooseSpecialty,
                         });
                         Console.WriteLine("You've added a new Hacker to the team!");
                     }
@@ -106,7 +107,9 @@ namespace HeistPart2
                         {
                             Name = NewTeamMember,
                             SkillLevel = NewSkillLevel,
-                            PercentageCut = NewMemberCut
+                            PercentageCut = NewMemberCut,
+                            Specialty = ChooseSpecialty,
+
                         });
                         Console.WriteLine("You've added new Muscle to the team!");
 
@@ -117,7 +120,9 @@ namespace HeistPart2
                         {
                             Name = NewTeamMember,
                             SkillLevel = NewSkillLevel,
-                            PercentageCut = NewMemberCut
+                            PercentageCut = NewMemberCut,
+                            Specialty = ChooseSpecialty,
+
                         });
 
                         Console.WriteLine("You've added a new Lock Specialist to the team!");
@@ -164,9 +169,19 @@ namespace HeistPart2
                 Console.WriteLine("Least Secure: Security Guard");
 
             }
+            Console.WriteLine("------------------------");
+            Console.WriteLine("Team member options:");
+            for (int i = 0; i < rolodex.Count(); i++)
+            {
+                Console.WriteLine($"{rolodex[i].Name}");
+                Console.WriteLine($"{rolodex[i].SkillLevel}");
+                Console.WriteLine($"{rolodex[i].PercentageCut}");
+            }
+
 
         }
     }
 }
+
 
 
