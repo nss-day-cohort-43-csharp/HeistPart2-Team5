@@ -68,6 +68,7 @@ namespace HeistPart2
                 if (NewTeamMember == "")
                 { LoopToken = false; }
 
+
                 else
                 {
 
@@ -161,6 +162,48 @@ namespace HeistPart2
             {
 
                 Console.WriteLine("Least Secure: Security Guard");
+
+
+                else
+                {
+
+
+                    Console.WriteLine("What is their specialty");
+                    Console.WriteLine("1) Hacker (Disables alarms)");
+                    Console.WriteLine("2) Muscle (Disarms guards)");
+                    Console.WriteLine("3) Lock Specialist (cracks vault)");
+                    string ChooseSpecialty = Console.ReadLine();
+                    Console.WriteLine("");
+
+                    Console.WriteLine("What is the team member's skill level? (a number between 1-100)");
+                    string MemberSkill = Console.ReadLine();
+                    int NewSkillLevel = int.Parse(MemberSkill);
+                    Console.WriteLine("");
+
+                    Console.WriteLine("What percentage do they get?");
+                    string MemberCut = Console.ReadLine();
+                    int NewMemberCut = int.Parse(MemberCut);
+                    Console.WriteLine("");
+
+                    if (ChooseSpecialty == "1")
+                    {
+                        rolodex.Add(new Hacker() { });
+                        Console.WriteLine("You've added a new Hacker to the team!");
+                    }
+                    else if (ChooseSpecialty == "2")
+                    {
+                        rolodex.Add(new Muscle() { });
+                        Console.WriteLine("You've added new Muscle to the team!");
+
+                    }
+                    else if (ChooseSpecialty == "3")
+                    {
+                        rolodex.Add(new LockSpecialist() { });
+
+                        Console.WriteLine("You've added a new Lock Specialist to the team!");
+                    }
+                }
+
             }
         }
     }
