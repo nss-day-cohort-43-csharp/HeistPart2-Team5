@@ -90,10 +90,7 @@ namespace HeistPart2
 
             }
             Console.WriteLine($"New number of operatives {rolodex.Count}");
-            // foreach (Muscle m in rolodex)
-            // {
-            //     Console.WriteLine(m);
-            // }
+
         }
     }
 }
