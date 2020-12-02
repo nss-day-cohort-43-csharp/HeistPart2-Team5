@@ -4,10 +4,10 @@ namespace HeistPart2
 {
     public interface IRobber
     {
-        public string Name { get; set; }
-        public int SkillLevel { get; set; }
-        public int PercentageCut { get; set; }
+        string Name { get; set; }
+        int SkillLevel { get; set; }
+        int PercentageCut { get; set; }
 
-        public void PerformSkill(Bank bank) { }
+        void PerformSkill(Bank bank) { }
     }
 }
